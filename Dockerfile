@@ -2,6 +2,8 @@ FROM jenkins/inbound-agent:4.6-1
 
 USER root
 
+RUN DEBIAN_FRONTEND=noninteractive apt update && apt install gettext -y
+
 # Install docker CLI
 RUN curl -fsSL https://get.docker.com -o get-docker.sh && sh ./get-docker.sh
 
