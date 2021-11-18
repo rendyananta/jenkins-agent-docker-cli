@@ -1,5 +1,5 @@
 build:
-	docker build -t rendyananta/jenkins-agent-docker-cli -f Dockerfile .
+	docker build -t rendyananta/jenkins-agent-k8s -f Dockerfile .
 
 push:
-	docker push rendyananta/jenkins-agent-docker-cli
+	docker push rendyananta/jenkins-agent-k8s
