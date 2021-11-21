@@ -2,7 +2,7 @@ FROM jenkins/inbound-agent:4.11-1
 
 USER root
 
-RUN DEBIAN_FRONTEND=noninteractive apt update && apt install gettext -y
+RUN DEBIAN_FRONTEND=noninteractive apt update && apt install gettext gpg gnupg -y
 
 # Install kubectl
 RUN curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl" && \
